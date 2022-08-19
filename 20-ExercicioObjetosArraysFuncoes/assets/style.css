@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main-content form {
+    margin-left:10px;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    gap: 5px;
+}
+
+.main-content button {
+    margin-top: 5px;
+    height: 2.5rem;
+}
+
+.resultado {
+    margin-top: 10px;
+    margin-left: 10px;
+}
