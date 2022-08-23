@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6C6EA0;
+    --secundary-color: #C1CAD6;
+    --white-color: #FFFFFF;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.space-content {
+    width: 100%;
+    height: 5rem;
+}
+.section {
+    background: var(--primary-color);
+    height: 100vh;
+}
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    width: 100%;
+    max-width: 80rem;
+    height: 9rem;
+    border-radius: 8px;
+    background: var(--white-color);
+
+}
+
+.main-content h1 {
+    font-size: 3rem;
+    font-family: 'Open Sans', sans-serif;
+}
