@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --primary-color: rgb(17, 86, 102);
+    --secundary-color:  cornflowerblue;
+    --gray-color:gray;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container {
+    width: 100%;
+    max-width: 640px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container h1, .container p {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    margin-bottom: 10px;
+    font-size: 24px;
+    height: 40px;
+    padding: 0 20px;
+}
+
+.form input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+
+.form button {
+    margin-top: 20px;
+    border-radius: 4px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: var(--primary-color);
+}
+
+.form button:active {
+    background: var(--secundary-color);
+}
+
+.container p {
+    font-size: 4.5rem;
+}
+
+.container .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container .buttons button {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0.8rem;
+    border: 1px solid var(--primary-color);
+}
+
+.container .buttons button:hover {
+    background: var(--secundary-color);
+}
+
+.container .buttons button:active {
+    background: var(--primary-color);
+}
