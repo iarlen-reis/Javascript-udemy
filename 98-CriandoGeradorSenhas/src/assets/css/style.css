@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+.container .senha-gerada {
+  font-size: 24px;
+  text-align: center;
+
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.qtd-caracteres {
+  height: 30px;
+  display: flex;
+  align-items: center;
+
+  column-gap: 10px;
+  margin-top: 20px;
+  padding-left: 40px; 
+  list-style: none;
+}
+
+.qtd-caracteres input {
+  height: 100%;
+  font-size: 20px;
+} 
+
+.container ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+
+
+.container ul li {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 24px;
+
+  font-weight: 500;
+}
+
+.container ul li:nth-child(3),
+.container ul li:nth-child(4) {
+  column-gap: 30px;
+}
+
+.container ul li input {
+  width: 20px;
+  height: 20px;
+}
+
+.container .gerar-senha {
+  width: 120px;
+  height: 55px;
+
+  cursor: pointer;
+  margin-left: 40px;
+
+  font-size: 24px;
+
+  color: white;
+  background: var(--primary-color-darker);
+}
+
+
+
+.container .gerar-senha:hover {
+  color: rgb(173, 165, 165);
+  background: rgba(2, 75, 75, 0.818);
+}
+
+.limpar-senha {
+  width: 120px;
+  height: 55px;
+
+  cursor: pointer;
+  margin-left: 40px;
+
+  font-size: 24px;
+
+  color: white;
+  background: rgba(188, 11, 11, 0.994);
+}
+
+.limpar-senha:hover {
+  color: rgb(162, 159, 159);
+  background: rgba(84, 15, 15, 0.994);
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: 550px;
+  }
+}
+
+@media (max-width: 572px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 350px;
+  }
+  .gerar-senha {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 300px;
+  }
+}
+
+@media (max-width: 325px) {
+  .container {
+
+    width: 280px;
+  }
+
+}
