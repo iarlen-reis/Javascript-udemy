@@ -1,0 +1,17 @@
+  <section class="container">
+    <h1>Olá seja bem-vindo!</h1>
+    <h2>Principais filmes do momento:</h2>
+    <hr>
+    {{#each filmes}}
+    <div>
+      <h4>{{titulo}}</h4>
+      <small>{{descricao}}</small>
+      <hr>
+    </div>
+
+    {{else}}
+    <h4>Nenhum filme disponivel no momento =/</h4>
+
+    {{/each}}
+
+  </section>

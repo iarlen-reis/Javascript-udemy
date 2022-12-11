@@ -1,0 +1,9 @@
+<section class="container">
+        <h1>Contatos</h1>
+    {{#each pessoas}}
+        <h4>NOME: {{nome}} | IDADE: {{idade}}</h4>
+    {{else}}
+    <h3>Nenhum contato salvo.</h3>
+    {{/each}}
+   <a href="/contato"><button>Adicionar contatos</button></a>
+</section>

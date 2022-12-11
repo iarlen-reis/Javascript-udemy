@@ -1,7 +1,10 @@
-exports.paginaInicial = (req, res) => {
-    res.render('index');
-};
+const {HomeModel} = require('../models/HomeModel');
 
-exports.paginaInicialPost = (req, res) => {
-    res.send('Formulário recebido com sucesso!');
+exports.paginaInicial = (req, res) => {
+    HomeModel.find().lean().then((filmes => {
+        res.render('home', {
+            titulo: 'Pagina Inicial',
+            filmes: filmes
+        });
+    }));
 };
