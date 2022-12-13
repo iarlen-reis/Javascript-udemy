@@ -1,11 +1,11 @@
 /* 
 Modelo Express + MongoDB + Handlebars:
-    - Helmet esta desativado no desenvolvimento.
+    -
 */
 
 // Importando path, otenv e helmet:
 const path = require('path');
-// const helmet = require('helmet'); DESATIVADO
+const helmet = require('helmet');
 require('dotenv').config();
 
 // Importando express e mongoose:
@@ -34,8 +34,7 @@ mongoose.connect(process.env.CONNECTIONSTRING)
     .catch(e => console.log(e));
 
 // Configurando pasta de arquivos estaticos e helmet:
-// app.use(helmet()); DESATIVADO
-app.use(express.json());
+app.use(helmet());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.resolve(__dirname, 'public')));
 
@@ -56,6 +55,7 @@ app.use(flash());
 
 // Handlebars configuração:
 const exphbs = require('express-handlebars');
+const csurf = require('csurf');
 const handlebars = exphbs.create({});
 
 app.engine('handlebars', handlebars.engine);

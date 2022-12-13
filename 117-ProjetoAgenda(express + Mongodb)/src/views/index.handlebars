@@ -1,0 +1,26 @@
+
+<h1 class="text-center">
+    Agenda
+    <p class="text-center lead">
+        Seus contatos estão abaixo 
+    </p>
+</h1>
+{{#if erros}}
+        <div class="alert alert-danger text-center">{{#each erros }}{{this}} <br>{{/each}}</div>
+    {{else}}
+    {{/if}}
+    {{#if success}}
+        <div class="alert alert-success text-center">{{#each success }}{{this}} <br>{{/each}}</div>
+    {{else}}
+{{/if}}
+
+<div class="responsive-table">
+    <table class="table my-3">
+        <tr>
+            <td>Iarlen</td>
+            <td>Reis</td>
+            <td>99-9999-99</td>
+            <td>email@email.com</td>
+        </tr>
+    </table>
+</div>

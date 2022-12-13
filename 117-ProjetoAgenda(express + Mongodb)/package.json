@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^4.6.0",
     "core-js": "^3.26.1",
@@ -25,7 +26,8 @@
     "helmet": "^6.0.1",
     "mongoose": "^6.8.0",
     "regenerator-runtime": "^0.13.11",
-    "style-loader": "^1.0.0"
+    "style-loader": "^1.0.0",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",
