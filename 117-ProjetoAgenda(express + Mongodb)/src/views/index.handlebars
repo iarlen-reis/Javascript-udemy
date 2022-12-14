@@ -14,13 +14,27 @@
     {{else}}
 {{/if}}
 
-<div class="responsive-table">
+{{#if contatos}}
+{{#each contatos}}
     <table class="table my-3">
         <tr>
-            <td>Iarlen</td>
-            <td>Reis</td>
-            <td>99-9999-99</td>
-            <td>email@email.com</td>
+            <td>{{this.nome}}</td>
+            <td>{{this.sobrenome}}</td>
+            <td>{{this.telefone}}</td>
+            <td>{{this.email}}</td>
+            <td><a href="/contato/index/{{this._id}}">Editar</a></td>
+            <td><a class="deletarContato" href="/contato/delete/{{this._id}}">Deletar</a></td>
         </tr>
     </table>
+{{/each}}
+{{else}}
+    <table class="table my-3">
+        <tr>
+            <td>Nenhum</td>
+            <td>contato</td>
+            <td>na sua</td>
+            <td>agenda</td>
+        </tr>
+    </table>
+{{/if}}
 </div>

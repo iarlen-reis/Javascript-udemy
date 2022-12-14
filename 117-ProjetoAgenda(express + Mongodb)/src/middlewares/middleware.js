@@ -7,9 +7,27 @@ exports.middlewareGlobal = (req, res, next) => {
 
 exports.userIsConnected = (req, res, next) => {
     if(req.session.user) {
-        res.redirect('/');
+        req.session.save(() => {
+            res.redirect('/');
+            return;
+        });
     }
     next();
+    return;
+};
+
+exports.userNotConnected = (req, res, next) => {
+    if(req.session.user) {
+        next();
+        return;
+    };
+    req.flash('erros', 'Você precisa fazer login para acessar essa página.');
+    req.session.save(() => {
+        res.redirect('/');
+        return;
+    });
+
+    return;
 };
 
 exports.checkCsrfError = (error, req, res, next) => {

@@ -19,11 +19,11 @@
     </div>
 {{else}}
 {{/if}}
-<div class="row my-4 mb-5">
-    <div class="col-lg">
+<div class="row">
+    <div class="col-lg my-5">
         <h4>Faça seu cadastro</h4>
         <p>Se você não tem uma conta, crie uma preenchendo o formulário abaixo.</p>
-        <form action="/login/register" method="POST">
+        <form class="formCadastro" action="/login/register" method="POST">
             <input type="hidden" name="_csrf" value="{{csrfToken}}">
             <div class="form-group">
                 <label for="email">Endereço de e-mail</label>
@@ -39,10 +39,10 @@
     </div>
 
 
-    <div class="col-lg">
+    <div class="col-lg my-5">
         <h4>Faça login</h4>
         <p>Se você já tem uma conta, faça login abaixo.</p>
-        <form action="/login/login" method="POST">
+        <form class="formLogin" action="/login/login" method="POST">
             <input type="hidden" name="_csrf" value="{{csrfToken}}">
             <div class="form-group">
                 <label for="email">Endereço de e-mail</label>
