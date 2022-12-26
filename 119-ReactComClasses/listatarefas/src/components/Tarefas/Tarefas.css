@@ -1,0 +1,42 @@
+.tarefas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 0 20px;
+  row-gap: 5px;
+}
+
+
+.tarefas li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(106, 73, 41);
+  padding: 20px 10px;
+
+  transition: all .6s ease;
+}
+
+.tarefas li:hover {
+  background: rgba(16, 201, 201, 0.3);
+}
+
+.tarefa_buttons {
+  display: flex;
+  column-gap: 10px;
+}
+
+.edit_button {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.delete_button {
+  color: crimson;
+  cursor: pointer;
+}
